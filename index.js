@@ -1,11 +1,9 @@
 const btn = document.getElementById('btn');
+let clickTimeStamp = Date.now();
+let counter = 0;
 btn.addEventListener('click', (event) => {
-  const { target } = event;
-  console.log('Clicked');
-  target.style['pointer-events'] = 'none';
-  target.disabled = true;
-  setTimeout(() => {
-    target.disabled = false;
-    target.style['pointer-events'] = 'all';
-  }, 1000);
+  if (Date.now() - clickTimeStamp >= 1000) {
+    console.log(`clicked ${++counter}`);
+    clickTimeStamp = Date.now();
+  }
 });
