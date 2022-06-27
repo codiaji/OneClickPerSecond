@@ -1,0 +1,8 @@
+button {
+    color: black;
+    font-weight:bolder;
+  background-color: lightseagreen;
+}
+button:disabled {
+  background-color: lightcoral;
+}
